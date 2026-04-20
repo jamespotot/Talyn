@@ -1,0 +1,334 @@
+.container {
+  max-width: 600px;
+  margin: 52px auto;
+  padding: 0 24px;
+}
+
+.container h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+
+.counter {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.progressBar {
+  width: 100%;
+  height: 2px;
+  background: var(--progress-track);
+  border-radius: 2px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--progress-fill);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* ── Card ── */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Metadata ── */
+.metadata {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.difficulty {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-tint);
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+}
+
+.conceptType {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-tint);
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
+.domain {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.question {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  font-family: 'Inconsolata', monospace;
+  color: var(--text-primary);
+}
+
+/* ── Options ── */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.option {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.optionLabel {
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 18px;
+  flex-shrink: 0;
+}
+
+.option:hover:not(:disabled) {
+  border-color: var(--border-focus);
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.option.selected {
+  border-color: var(--border-focus);
+  background: var(--bg-active);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.option.correct {
+  border-color: var(--border-focus);
+  background: var(--correct-bg);
+  color: var(--correct);
+  font-weight: 600;
+}
+
+.option.incorrect {
+  border-color: var(--border);
+  background: var(--incorrect-bg);
+  color: var(--incorrect);
+}
+
+/* ── Hint panel ── */
+.hintWrapper {
+  margin-bottom: 16px;
+}
+
+.hintToggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.hintToggle:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-focus);
+  color: var(--text-primary);
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  background: var(--bg-tint);
+  border-left: 2px solid var(--border-focus);
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+}
+
+/* ── Explanation ── */
+.explanation {
+  background: var(--bg-tint);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.explanationCorrect {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--correct);
+  font-weight: 500;
+  margin: 0;
+}
+
+.explanationDistractor {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Button ── */
+.button {
+  background: var(--sky);
+  color: #0F172A;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--navy);
+  color: #FFFFFF;
+}
+
+.button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ── Feedback ── */
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.correctText {
+  color: var(--correct);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.incorrectText {
+  color: var(--incorrect);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+    margin: 32px auto;
+  }
+
+  .container h2 {
+    font-size: 16px;
+  }
+
+  .counter {
+    font-size: 11px;
+  }
+
+  .card {
+    padding: 28px 20px;
+    border-radius: 12px;
+  }
+
+  .metadata {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .difficulty,
+  .conceptType {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .question {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .options {
+    gap: 7px;
+  }
+
+  .option {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .optionLabel {
+    min-width: 16px;
+    font-size: 12px;
+  }
+
+  .hintToggle {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .hint {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+
+  .explanation {
+    padding: 14px 16px;
+  }
+
+  .explanationCorrect {
+    font-size: 12px;
+  }
+
+  .explanationDistractor {
+    font-size: 11px;
+  }
+
+  .button {
+    padding: 11px 20px;
+    font-size: 13px;
+  }
+
+  .correctText,
+  .incorrectText {
+    font-size: 13px;
+  }
+}

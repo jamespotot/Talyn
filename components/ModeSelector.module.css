@@ -1,0 +1,214 @@
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 56px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section {}
+
+.sectionLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+/* ── Quiz type options ── */
+.optionRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.optionCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: var(--shadow-xs);
+}
+
+.optionCard:hover {
+  border-color: var(--border-focus);
+  background: var(--bg-hover);
+}
+
+.optionActive {
+  border-color: var(--border-focus) !important;
+  background: var(--bg-active) !important;
+  box-shadow: 0 0 0 3px rgba(134, 206, 231, 0.15);
+}
+
+.optionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.optionDesc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── Mode cards ── */
+.modeRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.modeCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: var(--shadow-xs);
+}
+
+.modeCard:hover {
+  border-color: var(--border-focus);
+  background: var(--bg-hover);
+}
+
+.modeActive {
+  border-color: var(--navy) !important;
+  background: var(--bg-tint) !important;
+  box-shadow: 0 0 0 3px rgba(15, 50, 99, 0.08);
+}
+
+[data-theme="dark"] .modeActive {
+  border-color: var(--sky) !important;
+  box-shadow: 0 0 0 3px rgba(134, 206, 231, 0.12);
+}
+
+.modeTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.modeTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.modeBadge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.badgePuro {
+  background: var(--bg-tint);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.badgeTalyno {
+  background: var(--bg-active);
+  color: var(--text-primary);
+  border: 1px solid var(--border-focus);
+}
+
+.modeDesc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── Generate button ── */
+.generateBtn {
+  background: var(--sky);
+  color: #0F172A;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  width: 100%;
+  letter-spacing: 0.1px;
+}
+
+.generateBtn:hover {
+  background: var(--navy);
+  color: #FFFFFF;
+}
+
+.generateBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 32px 16px;
+    gap: 24px;
+  }
+
+  .sectionLabel {
+    font-size: 10px;
+  }
+
+  .optionRow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .optionCard {
+    padding: 16px 14px;
+  }
+
+  .optionTitle {
+    font-size: 13px;
+  }
+
+  .optionDesc {
+    font-size: 11px;
+  }
+
+  .modeRow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .modeCard {
+    padding: 18px;
+  }
+
+  .modeTitle {
+    font-size: 13px;
+  }
+
+  .modeDesc {
+    font-size: 11px;
+  }
+
+  .generateBtn {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+}
