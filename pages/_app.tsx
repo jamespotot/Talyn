@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="icon" href="/talyn-logo-final.png" />
+        <link rel="icon" href="/talyn-logo-final-modified.png" />
       </Head>
       <Component {...pageProps} />
     </>
