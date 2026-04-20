@@ -82,9 +82,6 @@ talyn/
 ├── config/
 └── README.md
 
-## Database
-- Supabase
-
 ---
 
 ## Core Engine
