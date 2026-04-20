@@ -155,6 +155,7 @@ export default function Home() {
         <title>Talyn — Document Reviewer</title>
         <meta name="description" content="Convert documents into study materials" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/talyn-logo-final-modified.png?v=1" />
       </Head>
 
       <main className={styles.main}>
