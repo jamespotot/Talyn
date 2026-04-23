@@ -153,6 +153,7 @@ export default function Home() {
     <>
       <Head>
         <title>Talyn — Document Reviewer</title>
+        <meta name="google-site-verification" content="upzNrOUriABb5BjpjgnhXwR0M_1kUQYk8qsR-eGkj44" />
         <meta name="description" content="Convert documents into study materials" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/talyn-logo-final-modified.png?v=1" />
